@@ -1,0 +1,94 @@
+
+$primary-color:#D7F3FF; 
+$secondary-color:#3B9AE1;
+$dark-color: #0067A9;
+$border-color:#dee2e6;
+$minor-color:#ADB5BD;
+$primary-font-color:#212529;
+$secondary-font-color:#6c757d;
+$header-font-color:#343A40;
+
+$border: 1px solid $border-color;
+
+%header-font {
+  color: $header-font-color;
+  letter-spacing: 1px;
+}
+
+%primary-font {
+  // font-family: "OpenSans";
+  color: $primary-font-color
+}
+
+%secondary-font {
+  // font-family: "OpenSans";
+  color: $secondary-font-color
+}
+
+%minor-font {
+  // font-family: "RobotoCondensed";
+  color: $secondary-font-color
+  
+}
+
+.body {
+  background: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.footer {
+  margin: auto 0 0;
+  text-align: center;
+  height: 2rem;
+  
+}
+
+.content {
+  border: $border;
+  background-color: $primary-color;
+  border-radius: 5px;
+  position: fixed;
+  top: 6rem;
+  bottom: 4rem;
+  left: 1rem;
+  right: 1rem;
+  padding: 1rem;
+
+  &___title {
+    @extend %header-font;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  &___header {
+    @extend %header-font;
+    letter-spacing: 1px;
+  }
+
+  &___text {
+    @extend %secondary-font;
+    letter-spacing: .5px;
+  }
+}
+
+.form {
+  border: $border;
+  background-color: $secondary-color;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  min-width: 20rem;
+}
+
+.button-wrapper {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
